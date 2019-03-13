@@ -21,7 +21,7 @@ public class TestHarness {
 	 * Sample Callback implementation to capture result callback calls for basic
 	 * outcome/result testing.
 	 */
-	public class ResultCallback implements GameEngineCallback {
+	class ResultCallback implements GameEngineCallback {
 		private int countGameResult = 0;
 		private int countHouseRollOutcome = 0;
 		private int countPlayerRollOutcome = 0;
@@ -77,7 +77,7 @@ public class TestHarness {
 	public final static int DEFAULT_CREDIT_POINTS2 = 700;
 	public final static int DEFAULT_CREDIT_POINTS3 = 500;
 
-	public static void main(String args[]) throws InsufficientFundsException {
+	public static void main(String args[]) {
 		new TestHarness();
 	}
 
@@ -93,7 +93,7 @@ public class TestHarness {
 	private Player theCasual = new SimplePlayer("3", "The Casual",
 			DEFAULT_CREDIT_POINTS3);
 
-	public TestHarness() throws InsufficientFundsException {
+	public TestHarness() {
 		// basic tests
 		testAddPlayers();
 		testRemovePlayer();
@@ -385,6 +385,9 @@ public class TestHarness {
 			} else
 				System.out.println(this.theCasual.getPlayerName()
 						+ "'s getBet() was incorrect (0.0 marks)");
+		} catch (InsufficientFundsException ife) {
+			System.out.println(this.theCasual.getPlayerName()
+					+ "'s bet throws unnecessary exception (0.0 marks)");
 		} catch (Exception e) {
 			handleException(e, this.testNumber, 0);
 		}

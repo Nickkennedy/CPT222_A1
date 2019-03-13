@@ -11,9 +11,9 @@ public class SimplePlayer implements Player {
 	public static int bank;
 	
 	public SimplePlayer(String id, String name, int bank) {
-		this.id = id;
-		this.name = name;
-		this.bank = bank;
+		SimplePlayer.id = id;
+		SimplePlayer.name = name;
+		SimplePlayer.bank = bank;
 	}
 	public String getId() {
 		return id;
