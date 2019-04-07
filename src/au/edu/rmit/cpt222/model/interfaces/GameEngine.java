@@ -13,7 +13,7 @@ import au.edu.rmit.cpt222.model.exceptions.InsufficientFundsException;
  */
 
 public interface GameEngine {
-
+	
 	/**
 	 * enum type representing a game outcome for a player
 	 */

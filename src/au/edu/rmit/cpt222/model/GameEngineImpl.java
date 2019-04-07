@@ -8,7 +8,8 @@ import au.edu.rmit.cpt222.model.interfaces.Player;
 import au.edu.rmit.cpt222.test.harness.TestHarness.ResultCallback;
 
 public class GameEngineImpl implements GameEngine {
-	
+	GameStatus GameStatus;
+	int dice = NUM_OF_DICE;
 	public Collection<Player> getAllPlayers() {
 		// TODO Auto-generated method stub
 		return null;

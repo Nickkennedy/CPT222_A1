@@ -30,7 +30,7 @@ public class Client {
 
 		// initialise the Model (GameEngine)
 		final GameEngine gameEngine = new GameEngineImpl();
-
+		
 		// create two sample players
 		Player theShark = new SimplePlayer("1", "The Shark",
 				SAMPLE_CREDIT_POINTS1);

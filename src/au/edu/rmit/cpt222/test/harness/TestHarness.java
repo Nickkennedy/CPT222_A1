@@ -21,7 +21,7 @@ public class TestHarness {
 	 * Sample Callback implementation to capture result callback calls for basic
 	 * outcome/result testing.
 	 */
-	class ResultCallback implements GameEngineCallback {
+	public class ResultCallback implements GameEngineCallback {
 		private int countGameResult = 0;
 		private int countHouseRollOutcome = 0;
 		private int countPlayerRollOutcome = 0;
@@ -371,7 +371,7 @@ public class TestHarness {
 	 * Test for a valid bet. Checks if the game engine's placeBet() method
 	 * forwards the call to the appropriate player.
 	 */
-	private void testValidBet() throws InsufficientFundsException {
+	private void testValidBet() {
 		try {
 			this.testNumber = 4;
 			System.out.println("\nTest 04 - Handling a Valid Bet (0.5 marks)");
